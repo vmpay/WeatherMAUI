@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="weatherMaui.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Label
+                Text="Warsaw"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="TempLabel"
+                Text="--°"
+                Padding="30"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Current temperature"
+                FontSize="88"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="TypeLabel"
+                Text="--"
+                SemanticProperties.HeadingLevel="Level3"
+                FontSize="18"
+                HorizontalOptions="Center"/>
+
+            <Label
+                x:Name="AmpLabel"
+                Text="H:--°  L:--°"
+                SemanticProperties.HeadingLevel="Level3"
+                FontSize="18"
+                HorizontalOptions="Center"
+                />
+
+            <ActivityIndicator
+                x:Name="LoadingIndicator"
+                IsRunning="False"
+                />
+
+            <Button
+                x:Name="RefreshBtn"
+                Text="Click to refresh"
+                SemanticProperties.Hint="Refreshes the page"
+                Clicked="OnRefreshClicked"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
+
